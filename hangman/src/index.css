@@ -98,6 +98,18 @@ body {
 	font-size: 1.5em;
 }
 
+.answers:hover {
+	color: #F49E03;
+}
+
+.right:hover {
+	color: green;
+}
+
+.wrong:hover {
+	color: red;
+}
+
 .answers-ul {
   display: inline-block;
 }
