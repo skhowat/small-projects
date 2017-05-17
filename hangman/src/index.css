@@ -60,23 +60,59 @@ body {
   width: 70%;
   margin: 0 auto;
   overflow: auto;
+  min-height: 400px;
+}
+
+.answers {
+  float: left;
+  margin-right: 5px;
+	cursor: pointer;
+}
+
+.answers-ul {
+  overflow: auto;
+  display: inline-block;
+}
+
+.Incorrect {
+  min-height: 300px;
+  width: 40%;
+  float: left;
 }
 
 .graphic {
-  height: 100px;
-  width: 50%;
-  background-color: pink;
-  float: left;
+  /*height: 250px;
+  width: 250px;*/
+  /*border: solid 1px black;*/
+  margin: 20px auto;
+	/*background-image: url('../public/hm1.png');*/
 }
 
-.Guess {
-  float: right;
-  width: 50%;
-  background-color: #CCC;
-  text-align: left;
+/*.graphic img {
+	height: 300px;
+}*/
+
+.Correct {
+  float: left;
+  width: 60%;
 }
 
-.Gameboard {
-  float: left;
-  width: 100%;
+.test {
+  color: red;
+}
+
+.gameboard {
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.right {
+	color: green;
+	cursor: default;
+}
+
+.wrong {
+	color: red;
+	cursor: default;
 }
