@@ -7,7 +7,7 @@ class Correct extends Component {
     return (
       <div className="Correct">
         <div className="gameboard">{this.props.gameboard}</div>
-        <div>Hint: {this.props.currentAnswer.hint}</div>
+        <h2>Hint: {this.props.currentAnswer.hint}</h2>
         <button onClick={this.props.clickFunc}>Reveal Answer</button>
       </div>
     );

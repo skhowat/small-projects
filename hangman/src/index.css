@@ -52,10 +52,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+	background-color: #F2EFCE;
+	font-family: Courier, sans-serif;
 }
 
 .App {
-  background-color: #EEE;
   text-align: center;
   width: 70%;
   margin: 0 auto;
@@ -63,10 +64,39 @@ body {
   min-height: 400px;
 }
 
+.App h1 {
+	font-size: 2.25em;
+	padding: 2%;
+	color: #01728F;
+}
+
+.App h2 {
+	padding: 2%;
+	color: #01728F;
+	font-weight: bold;
+}
+
+.App button {
+	margin: 10px;
+	font-size: .80em;
+	font-family: Courier, sans-serif;
+	background-color: #FCC15A;
+	border: solid 2px #F49E03;
+	padding: 7px;
+	cursor: pointer;
+}
+
+.App button:hover {
+	background-color: #F49E03;
+	color: #01728F;
+	border: solid 2px #01728F;
+}
+
 .answers {
   float: left;
-  margin-right: 5px;
+  margin-right: 7px;
 	cursor: pointer;
+	font-size: 1.5em;
 }
 
 .answers-ul {
@@ -81,20 +111,18 @@ body {
 }
 
 .graphic {
-  /*height: 250px;
-  width: 250px;*/
-  /*border: solid 1px black;*/
   margin: 20px auto;
-	/*background-image: url('../public/hm1.png');*/
 }
 
-/*.graphic img {
-	height: 300px;
-}*/
 
 .Correct {
   float: left;
   width: 60%;
+	padding-top: 10%;
+}
+
+.Correct h2 {
+	color: #01728F;
 }
 
 .test {
@@ -103,7 +131,7 @@ body {
 
 .gameboard {
   letter-spacing: 3px;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 

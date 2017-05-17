@@ -12,7 +12,7 @@ class App extends Component {
     super();
     this.state = {
       letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-      currentAnswer: currentAnswer,
+      currentAnswer: Solutions[Math.floor(Math.random() * Solutions.length)],
       gameboard: currentAnswer.answer.replace(/[\w]/g, '_').split(""),
       guesses: 6,
       picIndex: 0,
@@ -70,8 +70,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div>Hangman</div>
-        <div>{this.state.message}</div>
+        <h1>Hangman</h1>
+        <h2>{this.state.message}</h2>
         <ul className="answers-ul">{answers}</ul>
         <div><button onClick={() => this.newGame()}>New Game</button></div>
         <Incorrect guesses={this.state.guesses} picIndex={this.state.picIndex}/>
