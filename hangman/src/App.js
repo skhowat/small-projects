@@ -18,7 +18,7 @@ class App extends Component {
       wrongGuess: []
     }
   }
-
+  
   componentDidMount() {
     const currentAnswer = Solutions[Math.floor(Math.random() * Solutions.length)];
     this.setState({

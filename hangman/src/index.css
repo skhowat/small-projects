@@ -99,7 +99,6 @@ body {
 }
 
 .answers-ul {
-  overflow: auto;
   display: inline-block;
 }
 
