@@ -3,19 +3,29 @@ import './index.css';
 
 class Card extends Component {
   render() {
-
-
     return (
       <div className="card">
         <div className="front">
-          Front
+          {this.props.question}
         </div>
         <div className="back">
-          Back
+          {this.props.answer}
         </div>
       </div>
     );
   }
 }
 
-export default Card;
+class Cards extends Component {
+  render() {
+
+
+    return (
+      <div className="quiz">
+        <Card question={this.props.question} answer={this.props.answer} />
+      </div>
+    );
+  }
+}
+
+export default Cards;
