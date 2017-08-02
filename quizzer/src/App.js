@@ -7,7 +7,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      trivia: [{question: 'test', correct_answer: 'test'}]
+      trivia: [{
+        question: 'test',
+        correctAnswer: 'test',
+        incorrectAnswers: []
+      }]
     }
 
   }
@@ -20,9 +24,24 @@ class App extends Component {
     })
     .done((data) => {
       console.log('data?', data);
+
+      let results = data.results;
+      let info = results.map((x) => (
+        {
+        question: x.question,
+        correctAnswer: x.correct_answer,
+        incorrectAnswers: x.incorrect_answers,
+        category: x.category
+      }));
+      // console.log(info);
+
+
+
+
       this.setState({
-        trivia: data.results
+        trivia: info
       });
+      // console.log(this.state);
     });
   }
 
@@ -31,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Test</h1>
-        <Cards question={this.state.trivia[0].question} answer={this.state.trivia[0].correct_answer}/>
+        <Cards question={this.state.trivia[0].question} correct={this.state.trivia[0].correctAnswer} incorrect={this.state.trivia[0].incorrectAnswers}/>
       </div>
     );
   }
