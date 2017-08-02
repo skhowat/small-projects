@@ -25,17 +25,17 @@ class Card extends Component {
     let answer = this.props.correct;
     let options = this.props.incorrect.slice();
     options.push(answer);
-    console.log(options);
+    // console.log(options);
     let shuffled = shuffle(options);
-    console.log('shuffled?', shuffled);
+    // console.log('shuffled?', shuffled);
 
     let choices = shuffled.map((x, i) => <li key={i}>{x}</li>);
 
     let question = this.props.question;
     question = question.replace(/&quot;/g, '"');
     question = question.replace(/&#039;/g, "'");
-    question = question.replace(/&ldquo;/g, '"');
-    console.log(question);
+    // question = question.replace(/&ldquo;/g, '"');
+    // console.log(question);
 
 
 
@@ -43,9 +43,9 @@ class Card extends Component {
       <div className="card">
         <div className="front">
           {question}
-          <ul>
+          <ol>
             {choices}
-          </ul>
+          </ol>
         </div>
         <div className="back">
           {this.props.correct}

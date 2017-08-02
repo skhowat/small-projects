@@ -40,3 +40,8 @@ body {
   background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
   /*background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);*/
 }
+
+ol {
+  list-style-type: lower-alpha;
+  text-align: left;
+}
