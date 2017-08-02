@@ -8,8 +8,8 @@ class App extends Component {
     super();
     this.state = {
       trivia: [{
-        question: 'test',
-        correctAnswer: 'test',
+        question: '',
+        correctAnswer: '',
         incorrectAnswers: []
       }]
     }
@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Test</h1>
-        <Cards question={this.state.trivia[0].question} correct={this.state.trivia[0].correctAnswer} incorrect={this.state.trivia[0].incorrectAnswers}/>
+        <Cards trivia={this.state.trivia} />
       </div>
     );
   }

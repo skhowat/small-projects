@@ -4,8 +4,6 @@ import './index.css';
 class Card extends Component {
   render() {
 
-    console.log(this.props);
-
     function shuffle(arr) {
       let i = arr.length;
       let temp;
@@ -58,10 +56,15 @@ class Card extends Component {
 class Cards extends Component {
   render() {
 
+    let cards = this.props.trivia.map((x, i) =>
+      <li key={i}><Card question={x.question} correct={x.correctAnswer} incorrect={x.incorrectAnswers} /></li>
+    );
 
     return (
       <div className="quiz">
-        <Card question={this.props.question} correct={this.props.correct} incorrect={this.props.incorrect} />
+        <ul>
+          {cards}
+        </ul>
       </div>
     );
   }
