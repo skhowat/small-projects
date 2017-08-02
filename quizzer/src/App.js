@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     $.ajax ({
-      url: 'https://opentdb.com/api.php?amount=10'
+      url: 'https://opentdb.com/api.php?amount=12&difficulty=medium&type=multiple'
     })
     .done((data) => {
       console.log('data?', data);
@@ -51,7 +51,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Test</h1>
+        <h1>Quizzer</h1>
+        <h3>Hover over the cards to reveal the correct answer</h3>
         {quiz}
       </div>
     );

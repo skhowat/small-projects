@@ -32,6 +32,8 @@ class Card extends Component {
     let question = this.props.question;
     question = question.replace(/&quot;/g, '"');
     question = question.replace(/&#039;/g, "'");
+    question = question.replace(/&rsquo;/g, "'");
+    question = question.replace(/&amp;/g, "&");
     // question = question.replace(/&ldquo;/g, '"');
     // console.log(question);
 
@@ -40,13 +42,13 @@ class Card extends Component {
     return (
       <div className="card">
         <div className="front">
-          {question}
+          <h2>{question}</h2>
           <ol>
             {choices}
           </ol>
         </div>
         <div className="back">
-          {this.props.correct}
+          <h2>{this.props.correct}</h2>
         </div>
       </div>
     );

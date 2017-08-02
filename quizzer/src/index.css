@@ -1,10 +1,74 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1 {
+  color: #2D3142;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 2%;
+}
+
+h3 {
+  color: #2D3142;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 1%;
+}
+
+
 .card {
   position: relative;
   float: left;
-  padding-bottom: 25%;
-  width: 23%;
-  text-align: center;
-  margin: 1%;
+  padding-bottom: 22%;
+  width: 21%;
+  margin: 2%;
   cursor: pointer;
 }
 
@@ -17,15 +81,37 @@
   width: 100%;
   backface-visibility: hidden;
   transition: transform 0.8s;
+  border-radius: 8px;
 }
 
 .front {
-  background-color: #28AADC;
+  background-color: #EF8354;
+}
+
+.front h2 {
+  margin: 8%;
+}
+
+.front ol {
+  padding-left: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.front li {
+  margin-bottom: 3%;
 }
 
 .back {
-  background-color: #00648C;
+  background-color: #4F5D75;
   transform: rotateY(-180deg);
+  text-align: center;
+  color: #BFC0C0;
+}
+
+.back h2 {
+  margin-top: 25%;
+  color: #BFC0C0;
 }
 
 .card:hover .front {
@@ -37,8 +123,8 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
-  /*background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);*/
+  background-color: #BFC0C0;
+  font-family: Verdana, sans-serif;
 }
 
 ol {
