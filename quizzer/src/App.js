@@ -7,11 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      trivia: [{
-        question: '',
-        correctAnswer: '',
-        incorrectAnswers: []
-      }]
+      trivia: []
     }
 
   }
@@ -47,10 +43,16 @@ class App extends Component {
 
   render() {
 
+    let quiz;
+    if (this.state.trivia !== []) {
+      quiz = <Cards trivia={this.state.trivia} />
+    }
+
+
     return (
       <div className="App">
         <h1>Test</h1>
-        <Cards trivia={this.state.trivia} />
+        {quiz}
       </div>
     );
   }
